@@ -53,7 +53,7 @@
             </table>
             </div>
             <div class="d-grid gap-2 col-2 mx-auto">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#newMemberModal" class="btn btn-primary" type="button">New Member</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#newMemberModal" class="btn btn-primary">New Member</button>
                 <!-- -->
                 <div class="modal fade" id="newMemberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -63,11 +63,25 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="name" class="form-control" id="exampleInputEmail1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="membershiptype" class="form-label">Membership Type</label>
+                            <input type="membershiptype" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                     </div>
                 </div>
