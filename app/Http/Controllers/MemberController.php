@@ -23,10 +23,12 @@ class MemberController extends Controller
         return redirect()->route('welcome')->with('success','New member added!');
     }
 
-    public function delete($id){
-        $member = Member::find($id);
+    public function delete(Request $request){
+        $member = Member::findOrFail($request->id);
         $member->delete();
 
-        return redirect()->route('welcome')->with('success','Member deleted!');
+        return redirect()->route('welcome', $member->id)->with('success','Member deleted!');
     }
+
+   
 }

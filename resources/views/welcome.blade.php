@@ -42,7 +42,7 @@
                         <td>{{ $member->membership_expiration }}</td>
                         <td>
                             <button type="button" class="btn btn-primary">Edit</button>
-                            <button type="button" class="btn btn-primary">Delete</button>
+                            <a href="{{ route('deletemember', $member->id) }}" class="btn btn-sm btn-danger"> Delete </a>
                         </td>
                     </tr>
                     
