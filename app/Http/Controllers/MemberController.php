@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Models\Member;
+use App\Models\Member;
 
 class MemberController extends Controller
 {
