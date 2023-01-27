@@ -80,13 +80,13 @@
                             <label for="membershipexpiration" class="form-label">Membership Expiration</label>
                             <input type="date" class="form-control" id="membershipexpiration" name="membershipexpiration">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary">Submit</button>
                     </div>
+                    </form>
                     </div>
                 </div>
                 </div> 
