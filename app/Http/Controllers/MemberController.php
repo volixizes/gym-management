@@ -7,6 +7,11 @@ use App\Models\Member;
 
 class MemberController extends Controller
 {
+
+    public function index(){
+        return view('welcome')->with('members', Member::latest()->get());
+    }
+
     public function create(Request $request){
         $member = new Member;
         $member->name = $request->name;
@@ -16,5 +21,12 @@ class MemberController extends Controller
         $member->save();
 
         return redirect()->route('welcome')->with('success','New member added!');
+    }
+
+    public function delete($id){
+        $member = Member::find($id);
+        $member->delete();
+
+        return redirect()->route('welcome')->with('success','Member deleted!');
     }
 }

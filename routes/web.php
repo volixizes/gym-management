@@ -14,9 +14,7 @@ use App\Http\Controllers\MemberController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MemberController::class,'index'])->name('welcome');
 
 
 Route::post('/createmember', [MemberController::class,'create'])->name('createmember');

@@ -34,40 +34,35 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($members as $member)
                     <tr>
-                        <td>Mick Bautista</td>
-                        <td>mick.kodego@gmail.com</td>
-                        <td>Forever</td>
-                        <td>January 31, 2023</td>
+                        <td>{{ $member->name }}</td>
+                        <td>{{ $member->email }}</td>
+                        <td>{{ $member->membership_type }}</td>
+                        <td>{{ $member->membership_expiration }}</td>
                         <td>
                             <button type="button" class="btn btn-primary">Edit</button>
                             <button type="button" class="btn btn-primary">Delete</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Lara Bell</td></td>
-                        <td>larabell.kodego@gmail.com</td>
-                        <td>Temporary</td>
-                        <td>January 31, 2023</td>
-                        <td>
-                            <button type="button" class="btn btn-primary">Edit</button>
-                            <button type="button" class="btn btn-primary">Delete</button>
-                        </td>
-                    </tr>
+                    
+                    @endforeach
                 </tbody>
             </table>
             </div>
             <div class="d-grid gap-2 col-2 mx-auto">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#newMemberModal" class="btn btn-primary">New Member</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#newMemberModal" class="btn btn-primary">+ New Member</button>
                 <!-- -->
                 <div class="modal fade" id="newMemberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" >New Member</h1>
+                        <h1 class="modal-title fs-5" >Add New Member</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+
+                        <!--FORM-->
                         <form method="POST" action="{{ route('createmember') }}">
                             @csrf
                         <div class="mb-3">
