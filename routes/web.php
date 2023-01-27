@@ -18,3 +18,5 @@ Route::get('/', [MemberController::class,'index'])->name('welcome');
 
 
 Route::post('/createmember', [MemberController::class,'create'])->name('createmember');
+
+Route::get('/deletemember/{$id}', [MemberController::class,'index'])->name('welcome');
