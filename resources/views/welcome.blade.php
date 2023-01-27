@@ -66,19 +66,19 @@
                         <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1">
+                            <input type="text" class="form-control" id="name" name="name">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputPassword1">
+                            <input type="email" class="form-control" id="email" name="name">
                         </div>
                         <div class="mb-3">
                             <label for="membershiptype" class="form-label">Membership Type</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1">
+                            <input type="text" class="form-control" id="membershiptype" name="membershiptype">
                         </div>
                         <div class="mb-3">
                             <label for="membershipexpiration" class="form-label">Membership Expiration</label>
-                            <input type="date" class="form-control" id="exampleInputPassword1">
+                            <input type="date" class="form-control" id="membershipexpiration" name="membershipexpiration">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
