@@ -18,6 +18,11 @@
             <h1 class="fw-bold">🏋️‍♀️Lara's Gym</h1>
             <p>A gym management with create, register, update and delete operations.</p>
             <hr>
+
+            @if( session('success') )
+            <div class="alert alert-primary">{{ session('success') }}</div>
+            @endif
+
             <table class="table">
                 <thead>
                     <tr>
@@ -64,6 +69,7 @@
                     </div>
                     <div class="modal-body">
                         <form method="POST" action="{{ route('createmember') }}">
+                            @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" name="name">
@@ -84,7 +90,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                     </form>
                     </div>
