@@ -66,7 +66,7 @@
                         <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="name" class="form-control" id="exampleInputEmail1">
+                            <input type="text" class="form-control" id="exampleInputEmail1">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
@@ -74,7 +74,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="membershiptype" class="form-label">Membership Type</label>
-                            <input type="membershiptype" class="form-control" id="exampleInputPassword1">
+                            <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="membershipexpiration" class="form-label">Membership Expiration</label>
+                            <input type="date" class="form-control" id="exampleInputPassword1">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
